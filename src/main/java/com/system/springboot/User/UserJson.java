@@ -5,15 +5,15 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Past;
 
 public record UserJson(
-        @NotBlank
+        @NotBlank//VALIDAÇÃO, NÃO PERMITE NOME EM BRANCO, OU VAZIOS
         String name,
-        @Email
+        @Email//VALIDAÇÃO, ACEITA APENAS STRINGS NO FORMATO DE EMAIL
         String email,
-        @NotBlank
+        @NotBlank//VALIDAÇÃO, NÃO PERMITE NOME EM BRANCO, OU VAZIOS
         String username,
-        @NotBlank
+        @NotBlank//VALIDAÇÃO, NÃO PERMITE NOME EM BRANCO, OU VAZIOS
         String password,
-        @Past
+        @Past//VALIDAÇÃO, NÃO PERMITE DATAS A FRENTE DA DATA ATUAL
         java.sql.Date borndate) {
 
 }

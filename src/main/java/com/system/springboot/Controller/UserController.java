@@ -11,20 +11,20 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/user")
+@RestController //DEFINE QUE ESSA SERÁ UMA CLASSE DE ENDPOINTS
+@RequestMapping("/user") //DEFINE QUAL O ENDEREÇO DO ENDPOINT
 public class UserController {
 
     @Autowired
     UserRepository userRepository;
 
+    //CRIA UMA AÇÃO PARA O METODO POST DO ENDPOINT DEFINIDO NESTA CLASSE
     @PostMapping
     @Transactional
-    public String input(@RequestBody @Valid UserJson userJson){
-        userRepository.save(new User(userJson));
-        return "Usuário registrado com sucesso";
+    public void input(@RequestBody @Valid UserJson userJson){
+        userRepository.save(new User(userJson)); //REGISTRA UM USUARIO NO BANCO DE DADOS
     }
-
+    //CRIA UMA RESPOSTA PARA O METODO GET DO ENDPOINT DEFINIDO NESTA CLASSE
     @GetMapping
     public List<UserOutput> output(){
         return userRepository.findAll().stream().map(UserOutput::new).toList();
