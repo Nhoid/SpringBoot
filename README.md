@@ -4,16 +4,16 @@ Este projeto representa minha jornada de aprendizado em SpringBoot, onde aplico 
 
 ##Detalhes Técnicos:
 
-    **IDE:** IntelliJ
-    **Gerenciador de Dependências:** Gradle
-    **Banco de Dados:** SQL
+   **IDE:** IntelliJ
+   **Gerenciador de Dependências:** Gradle
+   **Banco de Dados:** SQL
 
 ##Configuração e Utilização:
 
-Para testar o projeto, é necessário ajustar as configurações do servidor no diretório **src/main/java/com/system/springtest3/Configuration**. Além disso, as configurações do aplicativo estão no arquivo application.properties.
+Para testar o projeto, é necessário ajustar as configurações do servidor no diretório **src/main/java/com/system/springtboot/Configuration**. Além disso, as configurações do aplicativo estão no arquivo application.properties.
 
 ##Estrutura de Pastas:
 
-    **src/main/java/com/system/springtest3/User:** Contém a classe do usuário, assim como DTOs (Objetos de Transferência de Dados) e o UserRepository.
+   **src/main/java/com/system/springboot/User:** Contém a classe do usuário, assim como DTOs (Objetos de Transferência de Dados) e o UserRepository.
 
-    **src/main/java/com/system/springtest3/Controller:** Aqui estão definidos os endpoints do projeto.
+   **src/main/java/com/system/springboot/Controller:** Aqui estão definidos os endpoints do projeto.
