@@ -1,9 +1,9 @@
-package com.system.springtest3.Controller;
+package com.system.springboot.Controller;
 
-import com.system.springtest3.User.User;
-import com.system.springtest3.User.UserJson;
-import com.system.springtest3.User.UserOutput;
-import com.system.springtest3.User.UserRepository;
+import com.system.springboot.User.User;
+import com.system.springboot.User.UserJson;
+import com.system.springboot.User.UserOutput;
+import com.system.springboot.User.UserRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

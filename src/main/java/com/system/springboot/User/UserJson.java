@@ -1,4 +1,4 @@
-package com.system.springtest3.User;
+package com.system.springboot.User;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

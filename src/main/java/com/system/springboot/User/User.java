@@ -1,4 +1,4 @@
-package com.system.springtest3.User;
+package com.system.springboot.User;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -27,6 +27,7 @@ public class User {
         this.password = userJson.password();
         this.borndate = userJson.borndate();
 
+        // teste de push
     }
 
     public String getStringDate(){

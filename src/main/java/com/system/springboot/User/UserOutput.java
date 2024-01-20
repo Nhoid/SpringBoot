@@ -1,6 +1,4 @@
-package com.system.springtest3.User;
-
-import java.text.SimpleDateFormat;
+package com.system.springboot.User;
 
 public record UserOutput(Integer id, String name, String password ,String username, String email, String borndate) {
     public UserOutput(User user){

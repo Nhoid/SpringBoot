@@ -1,4 +1,4 @@
-package com.system.springtest3.User;
+package com.system.springboot.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

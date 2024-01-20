@@ -1,4 +1,4 @@
-package com.system.springtest3.Configuration;
+package com.system.springboot.Configuration;
 
 import org.flywaydb.core.Flyway;
 import org.springframework.boot.autoconfigure.flyway.FlywayProperties;
