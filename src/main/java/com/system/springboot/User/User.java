@@ -20,20 +20,33 @@ public class User {
     private String username;
     private String password;
     private java.sql.Date borndate;
+    private Boolean active;
 
     //CONSTRUTOR PARA RECEBER DADOS DO TIPO JSON
     public User(UserJson userJson){
-
         this.name = userJson.name();
         this.email = userJson.email();
         this.username = userJson.username();
         this.password = userJson.password();
         this.borndate = userJson.borndate();
-
+        this.active = true;
     }
 
     //METODO PARA CONVERTER A DATA PARA STRING
     public String getStringDate(){
         return new SimpleDateFormat("dd/MM/yyyy").format(this.borndate);
+    }
+    public void desactive(){
+        this.active = false;
+    }//DESATIVA UM USUARIO
+    public void active(){this.active = true;}//ATIVA UM USUARIO
+
+    public void update(UserUpdateJson userUpdateJson) {// RECEBE ATUALIZAÇÃO COM BASE NO QUE NÃO VEIO NULL
+        if (userUpdateJson.name() != null) this.name = userUpdateJson.name();
+        if (userUpdateJson.email() != null) this.email = userUpdateJson.email();
+        if (userUpdateJson.username() != null) this.username = userUpdateJson.username();
+        if (userUpdateJson.password() != null) this.password = userUpdateJson.password();
+        if (userUpdateJson.active() != null) this.active = userUpdateJson.active();
+
     }
 }

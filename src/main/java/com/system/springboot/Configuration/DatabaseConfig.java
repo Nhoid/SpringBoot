@@ -27,7 +27,7 @@ public class DatabaseConfig {
                         // SENHA PARA O USUARIO DO BANCO DE DADOS
                         "root")
                 .locations(flywayProperties.getLocations().toArray(String[]::new))
-                .baselineOnMigrate(true)
+                .baselineOnMigrate(false)
                 .load();
     }
 
