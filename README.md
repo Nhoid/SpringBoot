@@ -5,7 +5,11 @@ Este projeto representa minha jornada de aprendizado em SpringBoot, onde aplico 
 ## Detalhes Técnicos:
 
    **IDE:** IntelliJ
+   
+   
    **Gerenciador de Dependências:** Gradle
+
+   
    **Banco de Dados:** SQL
 
 ## Configuração e Utilização:
