@@ -1,6 +1,9 @@
 package com.system.springboot.Controller;
 
 import com.system.springboot.User.*;
+import com.system.springboot.User.DTO.UserInput;
+import com.system.springboot.User.DTO.UserOutput;
+import com.system.springboot.User.DTO.UserUpdateJson;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

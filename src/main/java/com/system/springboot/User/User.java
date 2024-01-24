@@ -1,5 +1,7 @@
 package com.system.springboot.User;
 
+import com.system.springboot.User.DTO.UserInput;
+import com.system.springboot.User.DTO.UserUpdateJson;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;

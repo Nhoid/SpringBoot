@@ -1,6 +1,7 @@
 package com.system.springboot.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,4 +11,5 @@ import java.util.List;
 //TEMOS PAENAS QUE DEFINIR O TIPO DE OBJETO, QUE É <User> E O TIPO DE DADO DA CHAVE PRIMARIA <Integer>
 public interface UserRepository extends JpaRepository<User, Integer> {
     List<User> findAllByActiveTrue();
+    UserDetails findByUsername(String username);
 }

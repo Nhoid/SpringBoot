@@ -1,5 +1,7 @@
-package com.system.springboot.User;
+package com.system.springboot.User.DTO;
 
+
+import com.system.springboot.User.User;
 
 //OS PARAMETROS DEFINIDOS AQUI SERÃO OS PARAMETROS ENVIADOS PARA O FRONT-END QUANDO FIZER A REQUISIÇÃO
 public record UserOutput(Integer id, String name, String password ,String username, String email, String borndate) {
