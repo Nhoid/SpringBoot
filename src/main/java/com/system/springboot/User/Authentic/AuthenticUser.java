@@ -13,8 +13,11 @@ public class AuthenticUser implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
+
+    //METODO RESPONSAVEL POR RETORNAR OS DADOS DO USUARIO QUE ESTÁ TENTANDO FAZER LOGIN
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        System.out.println(userRepository.findByUsername(username));
         return userRepository.findByUsername(username);
     }
 }
