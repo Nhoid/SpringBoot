@@ -14,10 +14,12 @@ Este projeto representa minha jornada de aprendizado em SpringBoot, onde aplico 
 
 ## Configuração e Utilização:
 
-Para testar o projeto, é necessário ajustar as configurações do servidor no diretório **src/main/java/com/system/springtboot/Configuration**. Além disso, as configurações do aplicativo estão no arquivo application.properties.
+Para testar o projeto, é necessário ajustar as configurações do servidor no diretório **src/main/java/com/system/springtboot/Configuration**. Além disso, algumas configurações do aplicativo estão no arquivo application.properties.
 
 ## Estrutura de Pastas:
 
-   **src/main/java/com/system/springboot/User:** Contém a classe do usuário, assim como DTOs (Objetos de Transferência de Dados) e o UserRepository.
+   **src/main/java/com/system/springboot/User:** Contém a classe do usuário, assim como DTOs (Objetos de Transferência de Dados), UserRepository e Também o AuthenticUser.
 
-   **src/main/java/com/system/springboot/Controller:** Aqui estão definidos os endpoints do projeto.
+   **src/main/java/com/system/springboot/Controller:** Aqui estão definidos os endpoints do projeto, tanto os de manipulação de usuário quanto o de login.
+
+   **src/main/java/com/system/springboot/Infra:** Contém as classes de tratamento de exceptions, a do filtro de authenticação e a geração de token.
