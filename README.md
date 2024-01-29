@@ -2,6 +2,8 @@
 
 Este projeto representa minha jornada de aprendizado em SpringBoot, onde aplico gradualmente os conceitos adquiridos. O projeto é uma obra em constante evolução. Pretendo aprimorar e otimizar seções mais antigas conforme meu entendimento se aprofunda.
 
+O projeto contém comentários explicativos de partes que achei interessante anotar para deixar como fonte de informação para eu mesmo futuramente
+
 ## Detalhes Técnicos:
 
    **IDE:** IntelliJ
