@@ -17,7 +17,7 @@ public class AuthenticUser implements UserDetailsService {
     //METODO RESPONSAVEL POR RETORNAR OS DADOS DO USUARIO QUE ESTÁ TENTANDO FAZER LOGIN
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println(userRepository.findByUsername(username));
+        System.out.println("USUARIO ENCONTRADO: " + userRepository.findByUsername(username));
         return userRepository.findByUsername(username);
     }
 }

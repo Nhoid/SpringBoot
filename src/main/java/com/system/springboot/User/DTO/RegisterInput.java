@@ -4,7 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Past;
 
-public record UserInput(
+public record RegisterInput(
         @NotBlank//VALIDAÇÃO, NÃO PERMITE NOME EM BRANCO, OU VAZIOS
         String name,
         @Email//VALIDAÇÃO, ACEITA APENAS STRINGS NO FORMATO DE EMAIL

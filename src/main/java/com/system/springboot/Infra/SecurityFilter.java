@@ -45,14 +45,12 @@ public class SecurityFilter extends OncePerRequestFilter {
             SecurityContextHolder.getContext().setAuthentication(usernamePAT);//FAZ A AUTENTICAÇÃO
         }
 
-
-
+        System.out.println("TOKEN: " + token);
         filterChain.doFilter(request, response);
     }
 
     private String TakeToken(HttpServletRequest request) {//PEGA O TOKEN DA REQUISIÇÃO ENVIADA
         String token = request.getHeader("Authorization");
-        System.out.println("request.getheader: " + token);
         if (token != null) return token.replace("Bearer ", "");
         return null;
     }

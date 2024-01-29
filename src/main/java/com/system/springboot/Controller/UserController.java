@@ -1,7 +1,6 @@
 package com.system.springboot.Controller;
 
 import com.system.springboot.User.*;
-import com.system.springboot.User.DTO.UserInput;
 import com.system.springboot.User.DTO.UserOutput;
 import com.system.springboot.User.DTO.UserUpdateJson;
 import jakarta.transaction.Transactional;
@@ -9,7 +8,6 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
@@ -22,18 +20,22 @@ public class UserController {
     UserRepository userRepository;
 
     //CRIA UMA AÇÃO PARA O METODO POST DO ENDPOINT DEFINIDO NESTA CLASSE
-    @PostMapping
-    @Transactional //SERVE PARA FAZER A ALTERAÇÃO DE UMA FORMA SEGURA
-    public ResponseEntity<UserOutput> input(@RequestBody @Valid UserInput userInput, UriComponentsBuilder uriBuilder){
-        User user = new User(userInput); // CONVERTE JSON PARA OBJETO JAVA
-        userRepository.save(user); //REGISTRA UM USUARIO NO BANCO DE DADOS
+//    @PostMapping
+//    @Transactional //SERVE PARA FAZER A ALTERAÇÃO DE UMA FORMA SEGURA
+//    public ResponseEntity<UserOutput> input(@RequestBody @Valid UserInput userInput, UriComponentsBuilder uriBuilder){
+//        User user = new User(userInput); // CONVERTE JSON PARA OBJETO JAVA
+//        userRepository.save(user); //REGISTRA UM USUARIO NO BANCO DE DADOS
+//
+//        return ResponseEntity.created(uriBuilder. //REPONSAVEL POR RETORNAR A URL CORRESPONDENTE AO USUARIO RECEM CRIADO
+//                path("/{id}").//DEFINE A URL COM BASE NO ID ATRIBUIDO AO REGISTRO
+//                buildAndExpand(user.getId()).
+//                toUri()).//CONVERTE PARA A URI
+//                body(new UserOutput(user));//RETORNA AS INFORMAÇÕES DO USUARIO CRIADO, JUNTO COM O ID QUE FOI ATRIBUIDO
+//    }
 
-        return ResponseEntity.created(uriBuilder. //REPONSAVEL POR RETORNAR A URL CORRESPONDENTE AO USUARIO RECEM CRIADO
-                path("/{id}").//DEFINE A URL COM BASE NO ID ATRIBUIDO AO REGISTRO
-                buildAndExpand(user.getId()).
-                toUri()).//CONVERTE PARA A URI
-                body(new UserOutput(user));//RETORNA AS INFORMAÇÕES DO USUARIO CRIADO, JUNTO COM O ID QUE FOI ATRIBUIDO
-    }
+
+
+
     //CRIA UMA RESPOSTA PARA O METODO GET DO ENDPOINT DEFINIDO NESTA CLASSE
     @GetMapping
     public ResponseEntity<List<UserOutput>> output(){

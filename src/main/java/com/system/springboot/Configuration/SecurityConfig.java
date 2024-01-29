@@ -29,7 +29,9 @@ public class SecurityConfig{
 
 
         httpSecurity.authorizeHttpRequests((authorization) ->
-                authorization.requestMatchers(HttpMethod.POST, "/login").permitAll()//PERMITE QUE O LOGIN POSSA SER FEITO SEM TOKEN
+                authorization.requestMatchers(HttpMethod.POST, "/auth/login").permitAll()//PERMITE QUE O LOGIN POSSA SER FEITO SEM TOKEN
+                        .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()//PERMITE O REGISTRO DE NOVOS USUARIOS SEM A NECESSIDADE DE TOKENS
+                        .requestMatchers(HttpMethod.GET, "/Status").permitAll()//PERMITE QUE ENVIEM SOLICITAÇÃO PARA CHECAR O STATUS DA API
                         .anyRequest().authenticated());//E DEFINE QUE TODOS OS OUTROS DEVEM SER AUTENTICADOS
 
 
